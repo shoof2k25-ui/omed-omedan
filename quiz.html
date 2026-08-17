@@ -1,0 +1,374 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Budaya Omed-Omedan | Uji Pengetahuanmu</title>
+    <meta name="description" content="Uji pengetahuanmu tentang tradisi Omed-Omedan! Jawab 10 pertanyaan, raih skor tertinggi, dan lihat posisimu di papan skor." />
+    <link rel="canonical" href="quiz.html" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/pages/quiz.css" />
+  </head>
+  <body>
+    <!-- Navbar injected by navbar.js -->
+
+    <main id="main-content">
+      <div class="quiz-app" x-data="quizApp()" x-cloak>
+
+        <!-- ════════════════════════════════════════════════
+             SCREEN 0 — HERO / ENTRY
+        ════════════════════════════════════════════════════ -->
+        <div class="quiz-screen" x-show="state === 'idle'" x-transition.duration.300ms>
+          <div class="quiz-hero">
+            <img src="assets/images/banner.JPG" alt="" class="quiz-hero__bg" aria-hidden="true" />
+            <div class="quiz-hero__overlay" aria-hidden="true"></div>
+            <div class="quiz-hero__pattern" aria-hidden="true"></div>
+
+            <div class="quiz-hero__content">
+              <!-- Badge -->
+              <div class="quiz-hero__badge">
+                <span class="quiz-hero__badge-dot" aria-hidden="true"></span>
+                <span data-i18n="quiz.badge">Quiz Interaktif</span>
+              </div>
+
+              <!-- Title -->
+              <h1 class="quiz-hero__title" data-i18n-html="quiz.hero_title">
+                Quiz Budaya <em>Omed-Omedan</em>
+              </h1>
+
+              <!-- Description -->
+              <p class="quiz-hero__desc" data-i18n="quiz.hero_desc">
+                Seberapa dalam kamu mengenal warisan budaya Bali ini?
+                Jawab 10 pertanyaan dan buktikan pengetahuanmu!
+              </p>
+
+              <!-- Stats -->
+              <div class="quiz-hero__stats" role="list" aria-label="Informasi quiz">
+                <div role="listitem">
+                  <span class="quiz-hero__stat-val">30s</span>
+                  <span class="quiz-hero__stat-lbl" data-i18n="quiz.stat_time">Per soal</span>
+                </div>
+                <div role="listitem">
+                  <span class="quiz-hero__stat-val">10</span>
+                  <span class="quiz-hero__stat-lbl" data-i18n="quiz.stat_q">Pertanyaan</span>
+                </div>
+                <div role="listitem">
+                  <span class="quiz-hero__stat-val">3</span>
+                  <span class="quiz-hero__stat-lbl" data-i18n="quiz.stat_level">Level</span>
+                </div>
+              </div>
+
+              <!-- Name input + start -->
+              <form class="quiz-name-form" @submit.prevent="enterGame()">
+                <input
+                  class="quiz-name-input"
+                  type="text"
+                  x-model="playerName"
+                  data-i18n-placeholder="quiz.name_placeholder"
+                  placeholder="Masukkan namamu…"
+                  maxlength="24"
+                  autocomplete="off"
+                  aria-label="Nama pemain"
+                />
+                <button
+                  type="submit"
+                  class="quiz-start-btn"
+                  :disabled="!playerName.trim()"
+                  data-i18n="quiz.name_btn"
+                >
+                  Mulai Quiz →
+                </button>
+              </form>
+
+              <!-- Mini leaderboard -->
+              <div class="quiz-mini-lb" x-show="leaderboard.length > 0">
+                <div class="quiz-mini-lb__title" data-i18n="quiz.lb_top">🏆 Skor Tertinggi</div>
+                <template x-for="(entry, i) in leaderboard.slice(0, 3)" :key="i">
+                  <div class="quiz-mini-lb__row">
+                    <span class="quiz-mini-lb__rank" x-text="rankLabel(i)"></span>
+                    <span class="quiz-mini-lb__name" x-text="entry.name"></span>
+                    <span class="quiz-mini-lb__pts" x-text="entry.score + ' pts'"></span>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════════════════════════════════════════════════
+             SCREEN 1 — LEVEL SELECT
+        ════════════════════════════════════════════════════ -->
+        <div class="quiz-screen" x-show="state === 'level-select'" x-transition.duration.300ms>
+          <div class="quiz-level-wrap">
+
+            <!-- Header -->
+            <div class="quiz-level-header">
+              <span class="quiz-level-lbl">
+                <span data-i18n="quiz.greet">Halo,</span>
+                <span x-text="playerName"></span>
+                <span data-i18n="quiz.greet_wave">👋</span>
+              </span>
+              <h2 class="quiz-level-heading" data-i18n="quiz.pick_level">Pilih Level</h2>
+              <p class="quiz-level-sub" data-i18n="quiz.level_sub">Setiap level berisi 10 soal pilihan acak</p>
+            </div>
+
+            <!-- Cards -->
+            <div class="quiz-levels-grid">
+
+              <!-- Mudah -->
+              <div class="quiz-level-card quiz-level-card--mudah"
+                   role="button" tabindex="0"
+                   aria-label="Mulai level Mudah"
+                   @click="selectLevel('mudah')"
+                   @keydown.enter="selectLevel('mudah')"
+                   @keydown.space.prevent="selectLevel('mudah')">
+                <span class="quiz-level-icon" aria-hidden="true">🌸</span>
+                <h3 class="quiz-level-name" data-i18n="quiz.easy_name">Mudah</h3>
+                <p class="quiz-level-text" data-i18n="quiz.easy_desc">
+                  Pertanyaan dasar seputar Omed-Omedan. Cocok untuk kamu yang baru mengenal tradisi ini!
+                </p>
+                <div class="quiz-level-meta">
+                  <span class="quiz-level-chip" data-i18n="quiz.easy_chip1">10 soal</span>
+                  <span class="quiz-level-chip" data-i18n="quiz.easy_chip2">100 poin/soal</span>
+                </div>
+                <div class="quiz-level-stars" aria-label="Tingkat kesulitan: 1 dari 3 bintang">
+                  <span class="quiz-star on" aria-hidden="true">⭐</span>
+                  <span class="quiz-star"    aria-hidden="true">⭐</span>
+                  <span class="quiz-star"    aria-hidden="true">⭐</span>
+                </div>
+              </div>
+
+              <!-- Menengah -->
+              <div class="quiz-level-card quiz-level-card--menengah"
+                   role="button" tabindex="0"
+                   aria-label="Mulai level Menengah"
+                   @click="selectLevel('menengah')"
+                   @keydown.enter="selectLevel('menengah')"
+                   @keydown.space.prevent="selectLevel('menengah')">
+                <span class="quiz-level-icon" aria-hidden="true">🔥</span>
+                <h3 class="quiz-level-name" data-i18n="quiz.mid_name">Menengah</h3>
+                <p class="quiz-level-text" data-i18n="quiz.mid_desc">
+                  Uji pemahamanmu lebih dalam tentang filosofi, prosesi, dan makna spiritual Omed-Omedan.
+                </p>
+                <div class="quiz-level-meta">
+                  <span class="quiz-level-chip" data-i18n="quiz.mid_chip1">10 soal</span>
+                  <span class="quiz-level-chip" data-i18n="quiz.mid_chip2">150 poin/soal</span>
+                </div>
+                <div class="quiz-level-stars" aria-label="Tingkat kesulitan: 2 dari 3 bintang">
+                  <span class="quiz-star on" aria-hidden="true">⭐</span>
+                  <span class="quiz-star on" aria-hidden="true">⭐</span>
+                  <span class="quiz-star"    aria-hidden="true">⭐</span>
+                </div>
+              </div>
+
+              <!-- Sulit -->
+              <div class="quiz-level-card quiz-level-card--sulit"
+                   role="button" tabindex="0"
+                   aria-label="Mulai level Sulit"
+                   @click="selectLevel('sulit')"
+                   @keydown.enter="selectLevel('sulit')"
+                   @keydown.space.prevent="selectLevel('sulit')">
+                <span class="quiz-level-icon" aria-hidden="true">⚡</span>
+                <h3 class="quiz-level-name" data-i18n="quiz.hard_name">Sulit</h3>
+                <p class="quiz-level-text" data-i18n="quiz.hard_desc">
+                  Hanya yang benar-benar menguasai sejarah dan budaya Omed-Omedan yang bisa menaklukkan level ini!
+                </p>
+                <div class="quiz-level-meta">
+                  <span class="quiz-level-chip" data-i18n="quiz.hard_chip1">10 soal</span>
+                  <span class="quiz-level-chip" data-i18n="quiz.hard_chip2">200 poin/soal</span>
+                </div>
+                <div class="quiz-level-stars" aria-label="Tingkat kesulitan: 3 dari 3 bintang">
+                  <span class="quiz-star on" aria-hidden="true">⭐</span>
+                  <span class="quiz-star on" aria-hidden="true">⭐</span>
+                  <span class="quiz-star on" aria-hidden="true">⭐</span>
+                </div>
+              </div>
+
+            </div><!-- /grid -->
+
+            <button class="quiz-back-btn" @click="state = 'idle'" aria-label="Kembali ke menu utama" data-i18n="quiz.btn_back">
+              ← Kembali
+            </button>
+
+          </div>
+        </div>
+
+        <!-- ════════════════════════════════════════════════
+             SCREEN 2 — PLAYING / FEEDBACK
+        ════════════════════════════════════════════════════ -->
+        <div class="quiz-screen" x-show="state === 'playing' || state === 'feedback'" x-transition.duration.200ms>
+          <div class="quiz-playing-wrap">
+
+            <!-- Progress header -->
+            <div class="quiz-play-header" role="progressbar"
+                 :aria-valuenow="currentIndex + 1"
+                 :aria-valuemax="questions.length"
+                 aria-label="Progres soal">
+              <span class="quiz-q-count">
+                <span data-i18n="quiz.q_label">Soal</span>
+                <span x-text="currentIndex + 1"></span> /
+                <span x-text="questions.length"></span>
+              </span>
+              <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" :style="`width:${progress}%`"></div>
+              </div>
+              <span class="quiz-score-display" aria-live="polite" aria-label="Skor saat ini">
+                <span x-text="score"></span> pts
+              </span>
+            </div>
+
+            <!-- Timer -->
+            <div class="quiz-timer-row" aria-label="Sisa waktu">
+              <span class="quiz-timer-num" :class="timerClass" x-text="timeLeft" aria-live="polite"></span>
+              <div class="quiz-timer-bar" role="progressbar" :aria-valuenow="timeLeft" :aria-valuemax="maxTime">
+                <div class="quiz-timer-fill" :class="timerClass" :style="`width:${timerPct}%`"></div>
+              </div>
+              <span class="quiz-timer-lbl" data-i18n="quiz.timer_lbl">detik</span>
+            </div>
+
+            <!-- Question card -->
+            <div class="quiz-card" x-show="currentQ" x-ref="card">
+
+              <!-- Level tag -->
+              <span class="quiz-level-tag" :class="`quiz-level-tag--${level}`" x-text="levelLabel"></span>
+
+              <!-- Question text -->
+              <p class="quiz-question-text" x-text="currentQ?.question"></p>
+
+              <!-- Options -->
+              <div class="quiz-options" role="list" aria-label="Pilihan jawaban">
+                <template x-for="(opt, i) in currentQ?.options" :key="i">
+                  <button
+                    class="quiz-option"
+                    role="listitem"
+                    :class="optionClass(i)"
+                    :disabled="state === 'feedback'"
+                    @click="pick(i)"
+                    :aria-pressed="selectedOption === i"
+                  >
+                    <span class="quiz-option__letter" aria-hidden="true" x-text="['A','B','C','D'][i]"></span>
+                    <span x-text="opt"></span>
+                  </button>
+                </template>
+              </div>
+
+              <!-- Feedback strip — text set dynamically from quiz-app.js via I18n -->
+              <div x-show="state === 'feedback'" class="quiz-feedback-strip"
+                   :class="{
+                     'quiz-feedback-strip--correct': selectedOption === correctIndex,
+                     'quiz-feedback-strip--wrong':   selectedOption !== correctIndex && selectedOption !== -1,
+                     'quiz-feedback-strip--timeout': selectedOption === -1
+                   }"
+                   aria-live="assertive"
+                   x-html="feedbackText">
+              </div>
+
+            </div><!-- /quiz-card -->
+
+          </div>
+        </div>
+
+        <!-- ════════════════════════════════════════════════
+             SCREEN 3 — RESULT
+        ════════════════════════════════════════════════════ -->
+        <div class="quiz-screen" x-show="state === 'result'" x-transition.duration.300ms>
+          <div class="quiz-result-wrap">
+            <div class="quiz-result-inner">
+
+              <!-- Grade Badge -->
+              <div class="quiz-grade-wrap">
+                <div class="quiz-grade-badge" :class="gradeClass" aria-label="Grade kamu">
+                  <span class="quiz-grade-letter" x-text="grade"></span>
+                </div>
+                <p class="quiz-grade-title">
+                  <span data-i18n="quiz.grade_label">Grade — Level</span>
+                  <span x-text="levelLabel"></span>
+                </p>
+              </div>
+
+              <!-- Stats -->
+              <div class="quiz-result-stats" role="list" aria-label="Statistik quiz">
+                <div class="quiz-result-stat" role="listitem">
+                  <span class="quiz-result-stat__val" x-text="score"></span>
+                  <span class="quiz-result-stat__lbl" data-i18n="quiz.stat_total">Total Skor</span>
+                </div>
+                <div class="quiz-result-stat" role="listitem">
+                  <span class="quiz-result-stat__val">
+                    <span x-text="correctCount"></span>/<span x-text="questions.length"></span>
+                  </span>
+                  <span class="quiz-result-stat__lbl" data-i18n="quiz.stat_correct">Jawaban Benar</span>
+                </div>
+                <div class="quiz-result-stat" role="listitem">
+                  <span class="quiz-result-stat__val" x-text="levelLabel"></span>
+                  <span class="quiz-result-stat__lbl" data-i18n="quiz.stat_level_lbl">Level</span>
+                </div>
+              </div>
+
+              <!-- Message (set by quiz-app.js) -->
+              <p class="quiz-result-msg" x-text="gradeMessage"></p>
+
+              <!-- Action buttons -->
+              <div class="quiz-result-actions">
+                <button class="btn btn--primary" @click="retry()" data-i18n="quiz.btn_retry">↻ Coba Lagi</button>
+                <button class="btn btn--outline" @click="state = 'level-select'" data-i18n="quiz.btn_change">Ganti Level</button>
+                <button class="btn btn--ghost" @click="reset()" data-i18n="quiz.btn_menu">Menu Utama</button>
+              </div>
+
+              <!-- Leaderboard -->
+              <div class="quiz-leaderboard">
+                <div class="quiz-lb-header">
+                  <span style="font-size:1.2rem">🏆</span>
+                  <span class="quiz-lb-title" data-i18n="quiz.lb_title">Papan Skor Terbaik</span>
+                </div>
+
+                <div x-show="leaderboard.length === 0" class="quiz-lb-empty" data-i18n="quiz.lb_empty">
+                  Belum ada skor tersimpan. Kamu yang pertama!
+                </div>
+
+                <template x-for="(entry, i) in leaderboard" :key="i">
+                  <div class="quiz-lb-row" :class="{'quiz-lb-row--me': isMyScore(entry)}">
+                    <span class="quiz-lb-rank" x-text="rankLabel(i)"></span>
+                    <span class="quiz-lb-name" x-text="entry.name"></span>
+                    <span class="quiz-lb-level" :class="lbLevelClass(entry.level)" x-text="entry.level"></span>
+                    <span class="quiz-lb-grade" x-text="entry.grade"></span>
+                    <span class="quiz-lb-score" x-text="entry.score + ' pts'"></span>
+                  </div>
+                </template>
+              </div>
+
+              <!-- Explore more -->
+              <div style="text-align:center; margin-top: var(--sp-10);">
+                <p style="color:var(--text-muted); margin-bottom:var(--sp-4); font-size:var(--fs-sm)" data-i18n="quiz.explore_more">
+                  Ingin tahu lebih banyak tentang Omed-Omedan?
+                </p>
+                <div style="display:flex; gap:var(--sp-3); justify-content:center; flex-wrap:wrap">
+                  <a href="sejarah.html" class="btn btn--sm btn--outline">📜 Sejarah</a>
+                  <a href="edukasi.html" class="btn btn--sm btn--outline">🎓 Edukasi</a>
+                  <a href="prosesi.html" class="btn btn--sm btn--outline">🎭 Prosesi</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /quiz-app -->
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Core scripts -->
+    <script src="assets/js/i18n/translations.js?v=10"></script>
+    <script src="assets/js/i18n/i18n.js?v=4"></script>
+    <script src="assets/js/core/theme.js"></script>
+    <script src="assets/js/core/navbar.js?v=4"></script>
+    <script src="assets/js/core/footer.js?v=8"></script>
+
+    <!-- Quiz data + app (must load before Alpine defer) -->
+    <script src="assets/js/data/quiz-data.js"></script>
+    <script src="assets/js/pages/quiz-app.js"></script>
+
+    <!-- Alpine.js v3 — deferred so quiz-app.js registers first -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+  </body>
+</html>

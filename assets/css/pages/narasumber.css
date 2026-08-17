@@ -1,0 +1,127 @@
+﻿/* ─── Narasumber — 3-column featured layout ─── */
+
+/* ─── Featured: 4 kolom sejajar ─── */
+.narasumber-featured {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-16);
+}
+
+.narasumber-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--sp-8);
+  text-align: center;
+  transition:
+    border-color var(--transition-base),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.narasumber-card:hover {
+  border-color: rgba(193,127,62,0.45);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.narasumber-card__photo {
+  margin-bottom: var(--sp-5);
+  display: flex;
+  justify-content: center;
+}
+
+.narasumber-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 3px solid var(--brand-accent);
+  box-shadow: 0 0 0 4px rgba(193,127,62,0.15);
+}
+
+.narasumber-card__name {
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  color: var(--color-heading);
+  margin-bottom: var(--sp-1);
+}
+
+.narasumber-card__role {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--accent-text);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--sp-5);
+  display: block;
+}
+
+.narasumber-card__quote {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: var(--lh-relaxed);
+  position: relative;
+  padding: var(--sp-4) var(--sp-5);
+  background: rgba(193,127,62,0.06);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid rgba(193,127,62,0.35);
+  text-align: left;
+}
+
+.narasumber-card__quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.2em;
+  left: var(--sp-3);
+  font-family: var(--font-serif);
+  font-size: 2.5em;
+  color: var(--accent-text);
+  opacity: 0.25;
+  line-height: 1;
+  font-style: normal;
+}
+
+.narasumber-card__bio {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: var(--lh-relaxed);
+  margin-top: var(--sp-4);
+  text-align: left;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--sp-4);
+}
+
+/* ─── "Narasumber Lainnya" small cards ─── */
+.narasumber-lainnya {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1180px) {
+  .narasumber-featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .narasumber-featured {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .narasumber-lainnya {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .narasumber-card { padding: var(--sp-6); }
+}

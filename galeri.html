@@ -1,0 +1,2359 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Festival | Omed-Omedan Banjar Kaja Sesetan</title>
+    <meta
+      name="description"
+      content="Galeri foto dokumentasi festival Omed-Omedan — koleksi visual yang menangkap keindahan dan semangat tradisi Banjar Kaja Sesetan."
+    />
+    <meta
+      property="og:title"
+      content="Galeri Festival Omed-Omedan | Banjar Kaja Sesetan"
+    />
+    <link rel="canonical" href="galeri.html" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/pages/galeri.css" />
+    <link rel="stylesheet" href="assets/css/pages/video.css" />
+  </head>
+  <body>
+    <main id="main-content">
+      <!-- ═══ PAGE HERO ════════════════════════════════════ -->
+      <div class="page-hero" data-ornament="top">
+        <img src="assets/images/banner.JPG" alt="" class="page-hero__bg" />
+        <div class="page-hero__overlay" aria-hidden="true"></div>
+        <div class="page-hero__ornament" aria-hidden="true"></div>
+        <div class="page-hero__content">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html" data-i18n="common.breadcrumb_home">Beranda</a>
+            <span class="breadcrumb__sep" aria-hidden="true">›</span>
+            <span aria-current="page" data-i18n="galeri.breadcrumb"
+              >Galeri</span
+            >
+          </nav>
+          <span class="page-hero__label" data-i18n="galeri.hero_label"
+            >Dokumentasi Visual</span
+          >
+          <h1 class="page-hero__title" data-i18n="galeri.hero_title">
+            Galeri Festival
+          </h1>
+          <p class="page-hero__desc" data-i18n="galeri.hero_desc">
+            Koleksi foto yang menangkap setiap momen berharga dalam pelaksanaan
+            tradisi Omed-Omedan dari tahun ke tahun.
+          </p>
+        </div>
+      </div>
+
+      <!-- ═══ VIDEO DOKUMENTER ══════════════════════════════ -->
+      <section
+        class="section section--alt"
+        id="video"
+        aria-label="Video dokumenter"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-header__label" data-i18n="galeri.video_label"
+              >Rekaman Visual</span
+            >
+            <h2 class="section-header__title" data-i18n="galeri.video_title">
+              Video Dokumenter
+            </h2>
+            <div class="divider"></div>
+            <p class="section-header__desc" data-i18n="galeri.video_desc">
+              Selain foto, saksikan juga rekaman video yang menangkap kemeriahan
+              dan kekhidmatan tradisi Omed-Omedan.
+            </p>
+          </div>
+
+          <div class="video-main" id="video-main">
+            <div class="video-player">
+              <div
+                class="video-player__wrap"
+                id="video-wrap"
+                data-youtube-id="NwYnz7j45sE"
+              >
+                <div
+                  class="video-player__placeholder"
+                  id="video-placeholder"
+                  style="
+                    background: linear-gradient(135deg, #2c1810, #8b4513);
+                    background-size: cover;
+                    background-position: center;
+                  "
+                >
+                  <button
+                    class="video-player__play-btn"
+                    id="video-play-btn"
+                    data-i18n-attr="aria-label:video.play_main"
+                    aria-label="Putar video dokumenter utama"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-info" id="video-info">
+              <span class="badge" data-i18n="video.main_badge"
+                >Video Utama</span
+              >
+              <h2 id="video-title" data-i18n="video.main_title">
+                Dokumenter Tradisi Omed-Omedan
+              </h2>
+              <p
+                class="video-info__meta"
+                id="video-meta"
+                data-i18n="video.main_meta"
+              >
+                Durasi: 4,5 menit · Banjar Kaja Sesetan, 2026
+              </p>
+              <p id="video-desc" data-i18n="video.main_p1">
+                Video dokumenter lengkap yang merekam keseluruhan prosesi
+                tradisi Omed-Omedan dari persiapan hingga pelaksanaan. Saksikan
+                bagaimana ribuan warga Banjar Kaja Sesetan bersatu dalam
+                festival budaya yang telah berlangsung ratusan tahun ini.
+              </p>
+              <p data-i18n="video.main_p2">
+                Dokumenter ini menangkap setiap detail prosesi — dari ritual
+                pembuka di Pura, keramaian massa di jalan utama, hingga sorakan
+                kebersamaan di akhir acara. Narasumber dari tokoh adat turut
+                memberikan penjelasan mendalam tentang makna dan nilai filosofis
+                di balik setiap tahap prosesi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ GALERI ════════════════════════════════════════ -->
+      <section class="section" aria-label="Koleksi foto galeri">
+        <div class="container">
+          <!-- Filter -->
+          <div
+            class="gallery-filters"
+            role="group"
+            data-i18n-attr="aria-label:galeri.filter_label"
+            aria-label="Filter kategori galeri"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="semua"
+              data-i18n="galeri.filter_all"
+            >
+              Semua
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="keramaian"
+              data-i18n="galeri.filter_crowd"
+            >
+              Keramaian
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="prosesi"
+              data-i18n="galeri.filter_proc"
+            >
+              Prosesi
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="ekspresi"
+              data-i18n="galeri.filter_expr"
+            >
+              Ekspresi
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="partisipasi"
+              data-i18n="galeri.filter_part"
+            >
+              Partisipasi
+            </button>
+          </div>
+
+          <!-- Grid -->
+          <div class="gallery-grid" id="gallery-grid" role="list">
+            <!-- ═══ PROSESI TRADISI (16) ═══ -->
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-378.JPG"
+                alt="Prosesi ritual Omed-Omedan dimulai"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap001"
+                  >Prosesi Ritual Dimulai</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-380.JPG"
+                alt="Pelaksanaan tradisi suci Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap002"
+                  >Pelaksanaan Tradisi Suci</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-401.JPG"
+                alt="Ritual Omed-Omedan berlangsung khidmat"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap003"
+                  >Ritual Omed-Omedan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-404.JPG"
+                alt="Prosesi penuh khidmat dan kesakralan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap004"
+                  >Prosesi Penuh Khidmat</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-405.JPG"
+                alt="Tahap prosesi Omed-Omedan berlangsung"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap005"
+                  >Tahap Prosesi Berlangsung</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-409.JPG"
+                alt="Saling tarik dalam tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap006"
+                  >Saling Tarik dalam Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-419.JPG"
+                alt="Momen inti prosesi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap007"
+                  >Momen Inti Prosesi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-468.JPG"
+                alt="Prosesi bersama warga Banjar Kaja"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap008"
+                  >Prosesi Bersama</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/INNA-442.JPG"
+                alt="Ritual pemersatu warga dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap009"
+                  >Ritual Pemersatu</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/INNA-443.JPG"
+                alt="Tahap suci prosesi berlangsung"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap010"
+                  >Tahap Suci Berlangsung</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/INNA-444.JPG"
+                alt="Prosesi Omed-Omedan penuh makna"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap011"
+                  >Prosesi Omed-Omedan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/INNA-454.JPG"
+                alt="Kesakralan tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap012"
+                  >Kesakralan Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/INNA-478.JPG"
+                alt="Ritual penuh makna dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap013"
+                  >Ritual Penuh Makna</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/INNA-566.JPG"
+                alt="Tahap akhir prosesi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap014"
+                  >Tahap Akhir Prosesi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/INNA-572.JPG"
+                alt="Prosesi penutupan Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap015"
+                  >Prosesi Penutupan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/penutup.jpeg"
+                alt="Akhir ritual suci Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap016"
+                  >Akhir Ritual Suci</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <!-- ═══ KERAMAIAN (9) ═══ -->
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/INA00148.jpg"
+                alt="Keramaian di jalan utama festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap017"
+                  >Keramaian di Jalan Utama</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/INA00152.jpg"
+                alt="Antusiasme penonton menyaksikan festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap018"
+                  >Antusiasme Penonton</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/SS%202024%20-%20MEDMEDAN%202024-22.jpg"
+                alt="Ribuan warga hadir menyaksikan Omed-Omedan 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap019"
+                  >Ribuan Warga Hadir</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/SS%202024%20-%20MEDMEDAN%202024-207.jpg"
+                alt="Suasana meriah festival Omed-Omedan 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap020"
+                  >Suasana Meriah Festival</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/SS%202024%20-%20MEDMEDAN%202024-283.jpg"
+                alt="Penonton memadati lokasi festival 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap021"
+                  >Penonton Memadati Lokasi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/27.jpg"
+                alt="Lautan penonton festival Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap022"
+                  >Lautan Penonton</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/CHY-67.JPG"
+                alt="Kerumunan warga banjar menyaksikan prosesi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap023"
+                  >Kerumunan Warga Banjar</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/CHY-270.JPG"
+                alt="Kemeriahan bersama dalam festival Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap024"
+                  >Kemeriahan Festival</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Keramaian/INNA-349.JPG"
+                alt="Semangat penonton mendukung tradisi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap025"
+                  >Semangat Penonton</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <!-- ═══ EKSPRESI (18) ═══ -->
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/DSC00087.JPG"
+                alt="Ekspresi kegembiraan peserta festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap026"
+                  >Ekspresi Kegembiraan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/DSC07495.jpg"
+                alt="Senyum para peserta Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap027"
+                  >Senyum Para Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/INA00111.jpg"
+                alt="Semangat yang terpancar dari peserta"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap028"
+                  >Semangat Terpancar</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/INA00114.jpg"
+                alt="Keceriaan dalam tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap029"
+                  >Keceriaan Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/INA00173.jpg"
+                alt="Momen ekspresif peserta festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap030"
+                  >Momen Ekspresif Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/INA00193.jpg"
+                alt="Sorotan wajah peserta Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap031"
+                  >Sorotan Wajah Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/20230323-INA00163-2.jpg"
+                alt="Ekspresi penuh makna dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap032"
+                  >Ekspresi Penuh Makna</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/SS%202024%20-%20MEDMEDAN%202024-180.jpg"
+                alt="Antusias pemuda banjar dalam festival 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap033"
+                  >Antusias Pemuda Banjar</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/CHY-112.JPG"
+                alt="Kegembiraan di wajah peserta festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap034"
+                  >Kegembiraan Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/CHY-269.JPG"
+                alt="Momen bahagia bersama dalam tradisi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap035"
+                  >Momen Bahagia Bersama</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/CHY-350.JPG"
+                alt="Ekspresi tradisi Bali yang autentik"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap036"
+                  >Ekspresi Tradisi Bali</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/CHY-369.JPG"
+                alt="Semangat Omed-Omedan dalam setiap ekspresi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap037"
+                  >Semangat Omed-Omedan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/CHY-492.JPG"
+                alt="Potret ekspresi peserta yang berkesan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap038"
+                  >Potret Ekspresi Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/CHY-494.JPG"
+                alt="Momen kebersamaan penuh ekspresi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap039"
+                  >Momen Kebersamaan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/IMG_5329.JPG"
+                alt="Kebahagiaan terpancar dari wajah peserta"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap040"
+                  >Kebahagiaan Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/INNA-350.JPG"
+                alt="Wajah gembira peserta Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap041"
+                  >Wajah Gembira</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/INNA-359.JPG"
+                alt="Ekspresi persaudaraan dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap042"
+                  >Ekspresi Persaudaraan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Ekspresi/INNA-573.JPG"
+                alt="Keindahan ekspresi dalam tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap043"
+                  >Keindahan Ekspresi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <!-- ═══ PARTISIPASI (50) ═══ -->
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC00253.JPG"
+                alt="Partisipasi aktif warga dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap044"
+                  >Partisipasi Aktif Warga</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07289.jpg"
+                alt="Semangat berpartisipasi warga banjar"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap045"
+                  >Semangat Berpartisipasi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07304.jpg"
+                alt="Masyarakat bersatu dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap046"
+                  >Masyarakat Bersatu</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07317.jpg"
+                alt="Pemuda Banjar Kaja berpartisipasi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap047"
+                  >Pemuda Banjar Kaja</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07344.jpg"
+                alt="Bersama dalam tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap048"
+                  >Bersama dalam Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07355.jpg"
+                alt="Peserta aktif festival Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap049"
+                  >Peserta Aktif Festival</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07373.jpg"
+                alt="Keterlibatan warga banjar dalam prosesi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap050"
+                  >Keterlibatan Warga Banjar</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07424.jpg"
+                alt="Partisipasi warga Kaja dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap051"
+                  >Partisipasi Warga Kaja</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07460.jpg"
+                alt="Semangat komunitas dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap052"
+                  >Semangat Komunitas</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/DSC07532.jpg"
+                alt="Kebersamaan peserta Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap053"
+                  >Kebersamaan Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INA00103.jpg"
+                alt="Warga berpartisipasi dalam tradisi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap054"
+                  >Warga Berpartisipasi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INA00114.jpg"
+                alt="Anak muda berpartisipasi dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap055"
+                  >Anak Muda Berpartisipasi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INA00154.jpg"
+                alt="Partisipasi pemuda dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap056"
+                  >Partisipasi Pemuda</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-33.jpg"
+                alt="Komunitas bersatu dalam Omed-Omedan 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap057"
+                  >Komunitas Bersatu</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-66.jpg"
+                alt="Warga banjar aktif dalam festival 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap058"
+                  >Warga Banjar Aktif</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-80.jpg"
+                alt="Peserta festival Omed-Omedan 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap059"
+                  >Peserta Festival 2024</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-88.jpg"
+                alt="Momen kebersamaan festival 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap060"
+                  >Momen Kebersamaan 2024</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-96.jpg"
+                alt="Partisipasi masyarakat festival 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap061"
+                  >Partisipasi Masyarakat</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-104.jpg"
+                alt="Semangat peserta Omed-Omedan 2024"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap062"
+                  >Semangat Peserta</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-107.jpg"
+                alt="Bersama menjaga tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap063"
+                  >Bersama Menjaga Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-118.jpg"
+                alt="Keterlibatan pemuda dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap064"
+                  >Keterlibatan Pemuda</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-138.jpg"
+                alt="Warga bergotong royong dalam tradisi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap065"
+                  >Warga Bergotong Royong</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-143.jpg"
+                alt="Partisipasi generasi muda banjar"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap066"
+                  >Partisipasi Generasi Muda</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-169.jpg"
+                alt="Bersama melestarikan budaya Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap067"
+                  >Melestarikan Budaya</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-173.jpg"
+                alt="Semangat kolektif warga dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap068"
+                  >Semangat Kolektif</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-174.jpg"
+                alt="Keikutsertaan warga dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap069"
+                  >Keikutsertaan Warga</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-236.jpg"
+                alt="Pemuda berpartisipasi dalam tradisi adat"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap070"
+                  >Pemuda Berpartisipasi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-244.jpg"
+                alt="Momen partisipasi warga yang berkesan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap071"
+                  >Momen Partisipasi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/SS%202024%20-%20MEDMEDAN%202024-281.jpg"
+                alt="Warga aktif dalam festival Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap072"
+                  >Warga Aktif Festival</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/24.jpg"
+                alt="Bersama dalam adat Bali Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap073"
+                  >Bersama dalam Adat</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/WhatsApp%20Image%202025-02-23%20at%2009.31.32.jpeg"
+                alt="Peserta setia tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap074"
+                  >Peserta Setia Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-7.JPG"
+                alt="Partisipasi banjar dalam festival Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap075"
+                  >Partisipasi Banjar</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-23.JPG"
+                alt="Semangat kebersamaan warga banjar"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap076"
+                  >Semangat Kebersamaan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-67.JPG"
+                alt="Warga bergandengan dalam tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap077"
+                  >Warga Bergandengan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-104.JPG"
+                alt="Partisipasi penuh semangat dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap078"
+                  >Partisipasi Penuh Semangat</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-148.JPG"
+                alt="Keikutsertaan aktif peserta Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap079"
+                  >Keikutsertaan Aktif</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-149.JPG"
+                alt="Momen bersama dalam tradisi adat Bali"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap080"
+                  >Momen Bersama</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-203.JPG"
+                alt="Peserta meramaikan festival Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap081"
+                  >Peserta Meramaikan Festival</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-253.JPG"
+                alt="Partisipasi komunal warga Banjar Kaja"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap082"
+                  >Partisipasi Komunal</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-268.JPG"
+                alt="Semangat adat Bali dalam Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap083"
+                  >Semangat Adat Bali</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/CHY-309.JPG"
+                alt="Bersama merayakan tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap084"
+                  >Bersama Rayakan Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/IMG_5271.JPG"
+                alt="Warga menyatukan langkah dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap085"
+                  >Warga Satukan Langkah</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INNA-3.JPG"
+                alt="Partisipasi tulus warga dalam tradisi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap086"
+                  >Partisipasi Tulus</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INNA-24.JPG"
+                alt="Momen penuh makna bagi peserta festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap087"
+                  >Momen Penuh Makna</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INNA-187.JPG"
+                alt="Kebersamaan dalam tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap088"
+                  >Kebersamaan dalam Tradisi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INNA-247.JPG"
+                alt="Pemuda menjaga warisan Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap089"
+                  >Pemuda Menjaga Warisan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INNA-317.JPG"
+                alt="Partisipasi lintas generasi dalam festival"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap090"
+                  >Partisipasi Lintas Generasi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INNA-339.JPG"
+                alt="Semangat melestarikan tradisi Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap091"
+                  >Semangat Melestarikan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/INNA-375.JPG"
+                alt="Bersatu dalam adat Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap092"
+                  >Bersatu dalam Adat</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Partisipasi/22.jpg"
+                alt="Warga Banjar Kaja bersatu dalam tradisi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap093"
+                  >Warga Banjar Bersatu</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <!-- ── Dokumentasi lawas ───────────────────────── -->
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/tambahan-galeri/1.jpg"
+                alt="Dokumentasi lawas peserta saling tarik diguyur air suci"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap094"
+                  >Dokumentasi Lawas: Guyuran Air Suci</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="keramaian"
+              role="listitem"
+            >
+              <img
+                src="assets/images/tambahan-galeri/2.jpg"
+                alt="Sorak sorai peserta di tengah guyuran air"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap095"
+                  >Sorak Peserta di Tengah Guyuran</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_crowd"
+                >Keramaian</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="ekspresi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/tambahan-galeri/3.jpg"
+                alt="Dokumentasi lawas momen saling tarik pemuda dan pemudi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap096"
+                  >Dokumentasi Lawas: Momen Saling Tarik</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_expr"
+                >Ekspresi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/tambahan-galeri/4.JPG"
+                alt="Panitia mengenakan pakaian adat Bali saat prosesi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap097"
+                  >Panitia Berpakaian Adat Bali</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/tambahan-galeri/5.jpg"
+                alt="Arsip lawas para pemuda seusai mengikuti prosesi"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap098"
+                  >Arsip Lawas: Pemuda Seusai Prosesi</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="partisipasi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/tambahan-galeri/6.jpg"
+                alt="Arsip lawas kebersamaan pemuda Banjar Kaja berpakaian adat"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap099"
+                  >Arsip Lawas: Kebersamaan Pemuda Banjar</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_part"
+                >Partisipasi</span
+              >
+            </div>
+          </div>
+          <!-- /#gallery-grid -->
+
+          <!-- Load More -->
+          <div class="gallery-load-more" id="gallery-load-more">
+            <p class="gallery-load-more__counter" id="load-more-counter"></p>
+            <button
+              class="btn btn--outline btn--lg"
+              id="load-more-btn"
+              data-i18n="galeri.btn_more"
+            >
+              Muat Lebih Banyak
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        data-i18n-attr="aria-label:galeri.lb_label"
+        aria-label="Tampilan foto penuh"
+        hidden
+      >
+        <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox__content">
+          <button
+            class="lightbox__close"
+            id="lightbox-close"
+            data-i18n-attr="aria-label:galeri.lb_close"
+            aria-label="Tutup"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <button
+            class="lightbox__prev"
+            id="lightbox-prev"
+            aria-label="Foto sebelumnya"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <div class="lightbox__img-wrap">
+            <img
+              class="lightbox__img"
+              id="lightbox-img"
+              src=""
+              alt="Foto galeri"
+            />
+          </div>
+          <button
+            class="lightbox__next"
+            id="lightbox-next"
+            aria-label="Foto berikutnya"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+          <div class="lightbox__caption" id="lightbox-caption"></div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/i18n/translations.js?v=10"></script>
+    <script src="assets/js/i18n/i18n.js?v=4"></script>
+    <script src="assets/js/core/theme.js"></script>
+    <script src="assets/js/core/navbar.js?v=4"></script>
+    <script src="assets/js/core/footer.js?v=8"></script>
+    <script src="assets/js/pages/galeri.js?v=3"></script>
+    <script src="assets/js/pages/video.js"></script>
+  </body>
+</html>

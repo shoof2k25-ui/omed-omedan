@@ -1,0 +1,156 @@
+/* ══════════════════════════════════════════════════════════
+   ORNAMENTS — Badge, blockquote, timeline, stat
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Badge ─── */
+.badge {
+  display: inline-block;
+  background: var(--red);
+  color: #ffffff;
+  font-family: var(--font-rounded);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+}
+.badge--outline {
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+}
+
+/* ── Divider ─── */
+.divider {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  margin: var(--sp-4) auto;
+  border-radius: var(--radius-full);
+}
+
+/* ── Blockquote ─── */
+.blockquote {
+  position: relative;
+  padding: var(--sp-6) var(--sp-8) var(--sp-6) var(--sp-12);
+  background: rgba(204, 41, 41, 0.06);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--red);
+}
+.blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -.1em; left: var(--sp-4);
+  font-family: var(--font-serif);
+  font-size: 4em;
+  color: var(--gold);
+  opacity: .2;
+  line-height: 1;
+}
+.blockquote__text {
+  font-family: var(--font-serif);
+  font-size: var(--fs-lg);
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--sp-3);
+}
+.blockquote__author {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Timeline ─── */
+.timeline { position: relative; padding-left: var(--sp-8); }
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 8px; bottom: 0; left: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--red), rgba(204,41,41,.05));
+}
+
+.timeline__item { position: relative; padding-bottom: var(--sp-10); }
+.timeline__item:last-child { padding-bottom: 0; }
+
+.timeline__dot {
+  position: absolute;
+  left: calc(-1 * var(--sp-8) - 6px);
+  top: 5px;
+  width: 14px; height: 14px;
+  border-radius: var(--radius-full);
+  background: var(--red);
+  border: 2px solid var(--bg-section);
+  box-shadow: 0 0 0 3px rgba(204,41,41,.22);
+  transition: transform var(--transition-base);
+}
+.timeline__item:hover .timeline__dot { transform: scale(1.4); }
+
+.timeline__period {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+.timeline__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  color: var(--color-heading);
+  margin-bottom: var(--sp-3);
+}
+.timeline__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: var(--lh-relaxed);
+  max-width: 460px;
+}
+.timeline__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  border: 1px solid var(--border-subtle);
+  margin-top: var(--sp-5);
+  display: block;
+}
+
+/* ── Stat ─── */
+.stat { text-align: center; }
+.stat__number {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--fs-4xl), 5vw, var(--fs-6xl));
+  font-weight: var(--fw-bold);
+  color: var(--red);
+  line-height: 1;
+  display: block;
+}
+.stat__label {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: var(--sp-2);
+}
+
+/* ── Corner ornament (CSS only, tanpa SVG) ─── */
+.corner-ornament { position: relative; }
+.corner-ornament::before,
+.corner-ornament::after {
+  content: '';
+  position: absolute;
+  width: 28px; height: 28px;
+  border-color: rgba(245,163,26,.35);
+  border-style: solid;
+}
+.corner-ornament::before { top: var(--sp-4); left: var(--sp-4); border-width: 2px 0 0 2px; }
+.corner-ornament::after  { bottom: var(--sp-4); right: var(--sp-4); border-width: 0 2px 2px 0; }

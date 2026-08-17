@@ -1,0 +1,819 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda | Omed-Omedan Banjar Kaja Sesetan</title>
+    <meta
+      name="description"
+      content="Website tradisi Omed-Omedan Banjar Kaja Sesetan — platform edukasi dan pelestarian warisan budaya Bali yang telah berlangsung ratusan tahun."
+    />
+    <meta
+      property="og:title"
+      content="Omed-Omedan | Tradisi Budaya Banjar Kaja Sesetan"
+    />
+    <meta
+      property="og:description"
+      content="Jelajahi sejarah, prosesi, dan nilai filosofis tradisi Omed-Omedan — simbol persatuan dan cinta masyarakat Bali."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="index.html" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/pages/home.css?v=3" />
+    <link rel="stylesheet" href="assets/css/pages/video.css" />
+  </head>
+  <body>
+    <main id="main-content">
+      <!-- ═══ HERO ═══════════════════════════════════════════ -->
+      <section class="hero" id="hero" data-ornament aria-label="Hero utama">
+        <img src="assets/images/banner.JPG" alt="" class="hero__bg" />
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__pattern" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <span class="hero__label" data-i18n="home.hero_label"
+            >Tradisi · Budaya · Warisan</span
+          >
+          <div class="hero__event-tag">
+            <span class="hero__event-dot" aria-hidden="true"></span>
+            <time datetime="2027-03-10" data-i18n="event.chip"
+              >Ngembak Geni · 10 Maret 2027</time
+            >
+          </div>
+          <h1 class="hero__title">OMED-<br />OMEDAN</h1>
+          <span class="hero__subtitle" data-i18n="home.hero_subtitle"
+            >Banjar Kaja Sesetan</span
+          >
+          <p class="hero__desc" data-i18n="home.hero_desc">
+            Tradisi unik penuh makna yang menjadi simbol cinta, kebersamaan, dan
+            keharmonisan masyarakat Bali.
+          </p>
+          <div class="hero__actions">
+            <a
+              href="sejarah.html"
+              class="btn btn--accent btn--lg"
+              data-i18n="home.hero_cta_explore"
+              >Jelajahi Tradisi</a
+            >
+            <a
+              href="#video-main"
+              class="btn btn--ghost btn--lg"
+              data-i18n="home.hero_cta_video"
+              >Tonton Video</a
+            >
+          </div>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+          <div class="hero__scroll-line"></div>
+          <span data-i18n="home.hero_scroll">Gulir</span>
+        </div>
+      </section>
+
+      <!-- ═══ EVENT COUNTDOWN ══════════════════════════════════ -->
+      <section class="event-bar" aria-label="Hitung mundur Omed-Omedan 2027">
+        <div class="container">
+          <div class="event-bar__inner">
+            <div class="event-bar__info">
+              <span class="event-bar__badge" data-i18n="event.badge"
+                >Ngembak Geni 2027</span
+              >
+              <h2 class="event-bar__title">Omed-Omedan<em> 2027</em></h2>
+              <p class="event-bar__date">
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M5 0v2H3a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2V0H9v2H5V0zM3 5h10v8H3V5z"
+                  />
+                </svg>
+                <span data-i18n="event.date"
+                  >10 Maret 2027 · Banjar Kaja Sesetan, Denpasar</span
+                >
+              </p>
+            </div>
+
+            <div
+              class="event-bar__countdown"
+              id="countdown"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <div class="event-bar__unit">
+                <strong class="event-bar__num" id="cd-days">—</strong>
+                <span class="event-bar__lbl" data-i18n="event.days">Hari</span>
+              </div>
+              <span class="event-bar__colon" aria-hidden="true"></span>
+              <div class="event-bar__unit">
+                <strong class="event-bar__num" id="cd-hours">—</strong>
+                <span class="event-bar__lbl" data-i18n="event.hours">Jam</span>
+              </div>
+              <span class="event-bar__colon" aria-hidden="true"></span>
+              <div class="event-bar__unit">
+                <strong class="event-bar__num" id="cd-mins">—</strong>
+                <span class="event-bar__lbl" data-i18n="event.mins">Menit</span>
+              </div>
+              <span class="event-bar__colon" aria-hidden="true"></span>
+              <div class="event-bar__unit">
+                <strong class="event-bar__num" id="cd-secs">—</strong>
+                <span class="event-bar__lbl" data-i18n="event.secs">Detik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ VIDEO UTAMA ════════════════════════════════════ -->
+      <section class="section" aria-label="Video dokumenter utama">
+        <div class="container">
+          <div class="video-main" id="video-main">
+            <!-- Video Player -->
+            <div class="video-player">
+              <div
+                class="video-player__wrap"
+                id="video-wrap"
+                data-youtube-id="NwYnz7j45sE"
+              >
+                <div
+                  class="video-player__placeholder"
+                  id="video-placeholder"
+                  style="
+                    background: linear-gradient(135deg, #2c1810, #8b4513);
+                    background-size: cover;
+                    background-position: center;
+                  "
+                >
+                  <button
+                    class="video-player__play-btn"
+                    id="video-play-btn"
+                    data-i18n-attr="aria-label:video.play_main"
+                    aria-label="Putar video dokumenter utama"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="mengenal-cards">
+                <div class="mengenal-card">
+                  <div class="mengenal-card__icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                      />
+                      <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                  </div>
+                  <div class="mengenal-card__text">
+                    <h3
+                      class="mengenal-card__title"
+                      data-i18n="home.card1_title"
+                    >
+                      Warisan Budaya
+                    </h3>
+                    <p class="mengenal-card__desc" data-i18n="home.card1_desc">
+                      Simbol identitas yang mempersatukan seluruh warga Banjar
+                      Kaja Sesetan lintas generasi.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mengenal-card">
+                  <div class="mengenal-card__icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                  </div>
+                  <div class="mengenal-card__text">
+                    <h3
+                      class="mengenal-card__title"
+                      data-i18n="home.card2_title"
+                    >
+                      Makna Filosofis
+                    </h3>
+                    <p class="mengenal-card__desc" data-i18n="home.card2_desc">
+                      Menyimbolkan Rwabhineda — keseimbangan dua kekuatan yang
+                      saling melengkapi dalam kosmologi Bali.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mengenal-card">
+                  <div class="mengenal-card__icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </div>
+                  <div class="mengenal-card__text">
+                    <h3
+                      class="mengenal-card__title"
+                      data-i18n="home.card3_title"
+                    >
+                      Nilai Luhur
+                    </h3>
+                    <p class="mengenal-card__desc" data-i18n="home.card3_desc">
+                      Mengajarkan harmoni, toleransi, dan semangat gotong royong
+                      yang menjadi pondasi masyarakat Bali.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Info -->
+            <div class="mengenal-layout">
+              <div class="mengenal-left">
+                <span
+                  class="section-header__label"
+                  data-i18n="home.mengenal_label"
+                  >Mengenal Omed-Omedan</span
+                >
+                <h2
+                  class="mengenal-heading"
+                  data-i18n-html="home.mengenal_heading"
+                >
+                  Lebih dari Sekadar Tradisi,<br />
+                  Ini <em>Warisan Kita Bersama.</em>
+                </h2>
+                <p class="mengenal-desc" data-i18n="home.mengenal_desc">
+                  Omed-Omedan adalah tradisi unik masyarakat Bali dari Banjar
+                  Kaja Sesetan — dilaksanakan sehari setelah Nyepi sebagai
+                  simbol persatuan, cinta, dan kebersamaan yang telah
+                  berlangsung ratusan tahun.
+                </p>
+                <a
+                  href="sejarah.html"
+                  class="btn btn--outline"
+                  data-i18n="home.mengenal_cta"
+                  >Selengkapnya tentang tradisi →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ PROSESI PREVIEW ════════════════════════════════ -->
+      <section class="section section--alt" aria-label="Prosesi tradisi">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-header__label" data-i18n="home.prosesi_label"
+              >Ritual Suci</span
+            >
+            <h2 class="section-header__title" data-i18n="home.prosesi_title">
+              Prosesi Tradisi
+            </h2>
+            <div class="divider"></div>
+            <p class="section-header__desc" data-i18n="home.prosesi_desc">
+              Lima tahap prosesi yang dijalankan dengan penuh khidmat,
+              mencerminkan nilai spiritual dan sosial masyarakat Bali.
+            </p>
+          </div>
+
+          <div class="prosesi-preview">
+            <div class="prosesi-preview__item">
+              <span class="prosesi-preview__number">01</span>
+              <h3 data-i18n="home.p01_title">Memohon Izin</h3>
+              <p data-i18n="home.p01_desc">
+                Penglingsir dan Pemangku Adat memohon izin dan restu kepada
+                Sesungsungan agar prosesi berjalan lancar dan penuh berkah.
+              </p>
+            </div>
+            <div class="prosesi-preview__item">
+              <span class="prosesi-preview__number">02</span>
+              <h3 data-i18n="home.p02_title">Meadu Barong</h3>
+              <p data-i18n="home.p02_desc">
+                Pementasan dua barong berbentuk babi yang saling beradu sebagai
+                bagian dari rangkaian tradisi yang sakral.
+              </p>
+            </div>
+            <div class="prosesi-preview__item">
+              <span class="prosesi-preview__number">03</span>
+              <h3 data-i18n="home.p03_title">Sembahyang Bersama</h3>
+              <p data-i18n="home.p03_desc">
+                Seluruh peserta bersembahyang bersama untuk memohon kelancaran
+                dan keselamatan sebelum prosesi inti.
+              </p>
+            </div>
+            <div class="prosesi-preview__item">
+              <span class="prosesi-preview__number">04</span>
+              <h3 data-i18n="home.p04_title">Omed-Omedan</h3>
+              <p data-i18n="home.p04_desc">
+                Inti tradisi — pemuda dan pemudi saling tarik-menarik dipandu
+                tokoh adat, diiringi percikan air suci tirtha.
+              </p>
+            </div>
+            <div class="prosesi-preview__item">
+              <span class="prosesi-preview__number">05</span>
+              <h3 data-i18n="home.p05_title">Sembahyang Penutup</h3>
+              <p data-i18n="home.p05_desc">
+                Seluruh peserta kembali bersembahyang sebagai ungkapan syukur
+                atas berlangsungnya tradisi dengan baik.
+              </p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--sp-10)">
+            <a
+              href="prosesi.html"
+              class="btn btn--primary"
+              data-i18n="home.prosesi_cta"
+              >Lihat Detail Prosesi</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ GALERI PREVIEW ════════════════════════════════ -->
+      <section class="section" aria-label="Pratinjau galeri">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-header__label" data-i18n="home.gallery_label"
+              >Dokumentasi Visual</span
+            >
+            <h2 class="section-header__title" data-i18n="home.gallery_title">
+              Galeri Festival
+            </h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="gallery-preview">
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-378.JPG"
+                alt="Prosesi ritual Omed-Omedan dimulai"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap001"
+                  >Prosesi Ritual Dimulai</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-380.JPG"
+                alt="Pelaksanaan tradisi suci Omed-Omedan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap002"
+                  >Pelaksanaan Tradisi Suci</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-401.JPG"
+                alt="Ritual Omed-Omedan berlangsung khidmat"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap003"
+                  >Ritual Omed-Omedan</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+
+            <div
+              class="card card--gallery"
+              data-category="prosesi"
+              role="listitem"
+            >
+              <img
+                src="assets/images/Prosesi%20Tradisi/CHY-404.JPG"
+                alt="Prosesi penuh khidmat dan kesakralan"
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="card__gallery-overlay">
+                <span class="card__gallery-caption" data-i18n="galeri.cap004"
+                  >Prosesi Penuh Khidmat</span
+                >
+              </div>
+              <span class="card__gallery-badge" data-i18n="galeri.filter_proc"
+                >Prosesi</span
+              >
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--sp-10)">
+            <a
+              href="galeri.html"
+              class="btn btn--outline"
+              data-i18n="home.gallery_cta"
+              >Lihat Semua Galeri</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ QUOTE SECTION ═════════════════════════════════ -->
+      <section class="quote-section" aria-label="Kutipan budaya">
+        <div class="container">
+          <div
+            class="blockquote quote-feature"
+            style="max-width: 760px; margin: 0 auto"
+          >
+            <p class="blockquote__text" data-i18n="home.quote_text">
+              "Budaya adalah akar, tradisi adalah jiwa."
+            </p>
+            <span class="blockquote__author" data-i18n="home.quote_author"
+              >— Masyarakat Banjar Kaja Sesetan</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ EDUKASI PREVIEW ═══════════════════════════════ -->
+      <section class="section section--alt" aria-label="Edukasi budaya">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-header__label" data-i18n="home.edu_label"
+              >Pelajari Lebih Dalam</span
+            >
+            <h2 class="section-header__title" data-i18n="home.edu_title">
+              Edukasi Budaya
+            </h2>
+            <div class="divider"></div>
+            <p class="section-header__desc" data-i18n="home.edu_desc">
+              Temukan makna filosofis dan nilai-nilai luhur di balik setiap
+              aspek tradisi Omed-Omedan.
+            </p>
+          </div>
+
+          <div class="cards-grid cards-grid--3">
+            <div class="card card--module">
+              <div class="card__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h3 class="card__module-title" data-i18n="home.edu1_title">
+                Makna &amp; Filosofi
+              </h3>
+              <p class="card__module-desc" data-i18n="home.edu1_desc">
+                Nilai-nilai filosofis dalam setiap aspek tradisi Omed-Omedan
+                dari nama hingga prosesi ritualnya.
+              </p>
+              <a
+                href="edukasi.html#makna-filosofi"
+                class="card__module-link"
+                data-i18n="common.learn_more"
+                >Selengkapnya →</a
+              >
+            </div>
+
+            <div class="card card--module">
+              <div class="card__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path
+                    d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                  />
+                </svg>
+              </div>
+              <h3 class="card__module-title" data-i18n="home.edu2_title">
+                Tradisi di Bali
+              </h3>
+              <p class="card__module-desc" data-i18n="home.edu2_desc">
+                Perbandingan Omed-Omedan dengan tradisi serupa di berbagai
+                wilayah Bali.
+              </p>
+              <a
+                href="edukasi.html#tradisi-bali"
+                class="card__module-link"
+                data-i18n="common.learn_more"
+                >Selengkapnya →</a
+              >
+            </div>
+
+            <div class="card card--module">
+              <div class="card__module-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3 class="card__module-title" data-i18n="home.edu3_title">
+                Pelestarian Budaya
+              </h3>
+              <p class="card__module-desc" data-i18n="home.edu3_desc">
+                Upaya dan strategi menjaga kelestarian tradisi Omed-Omedan di
+                era modern.
+              </p>
+              <a
+                href="edukasi.html#pelestarian"
+                class="card__module-link"
+                data-i18n="common.learn_more"
+                >Selengkapnya →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ FAQ ═══════════════════════════════════════════ -->
+      <section
+        class="section"
+        id="faq"
+        aria-label="Pertanyaan yang sering diajukan"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-header__label" data-i18n="home.faq_label"
+              >Tanya Jawab</span
+            >
+            <h2 class="section-header__title" data-i18n="home.faq_title">
+              Pertanyaan Umum
+            </h2>
+            <div class="divider"></div>
+            <p class="section-header__desc" data-i18n="home.faq_desc">
+              Jawaban singkat atas hal-hal yang paling sering ditanyakan seputar
+              tradisi dan festival Omed-Omedan.
+            </p>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q1"
+                  >Apa itu tradisi Omed-Omedan?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a1">
+                    Omed-Omedan adalah tradisi turun-temurun masyarakat Banjar
+                    Kaja, Sesetan, Denpasar. Tradisi ini menjadi simbol
+                    persatuan, cinta, dan kebersamaan yang telah diwariskan
+                    leluhur sejak abad ke-17 dan tetap dipertahankan hingga saat
+                    ini.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q2"
+                  >Apa arti dari kata "Omed-Omedan"?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a2">
+                    Kata "omed" dalam bahasa Bali berarti "tarik". Nama ini
+                    menggambarkan inti tradisi, yaitu para pemuda dan pemudi
+                    saling berhadapan dan tarik-menarik dalam semangat
+                    kebersamaan.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q3"
+                  >Kapan tradisi Omed-Omedan dilaksanakan?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a3">
+                    Sebelum tahun 1980-an, tradisi ini dilaksanakan pada sore
+                    hari tepat saat Hari Raya Nyepi. Setelah adanya pembinaan
+                    dari Parisada Hindu Dharma Indonesia, pelaksanaannya
+                    dipindahkan menjadi sehari setelah Nyepi, yaitu pada Hari
+                    Ngembak Geni.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q4"
+                  >Di mana lokasi pelaksanaannya?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a4">
+                    Festival berlangsung di jalan utama Banjar Kaja Sesetan,
+                    Denpasar Selatan, Bali. Lokasinya mudah diakses dari pusat
+                    kota Denpasar dan tersedia area parkir di sekitar lokasi.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q5"
+                  >Apakah terbuka untuk umum dan berbayar?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a5">
+                    Festival Omed-Omedan terbuka untuk umum dan tidak dipungut
+                    biaya alias gratis. Pesertanya sendiri adalah seluruh
+                    pemuda-pemudi Banjar Kaja Sesetan.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q6"
+                  >Bagaimana tahapan prosesinya?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a6">
+                    Prosesi terdiri dari lima tahap: memohon izin kepada
+                    Sesungsungan, pementasan Meadu Barong, sembahyang bersama,
+                    pelaksanaan Omed-Omedan, dan ditutup dengan sembahyang
+                    penutup.
+                  </p>
+                  <a
+                    href="prosesi.html"
+                    class="faq__link"
+                    data-i18n="home.faq_a6_link"
+                    >Lihat detail prosesi →</a
+                  >
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q7"
+                  >Apa makna filosofis di balik tradisi ini?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a7">
+                    Dalam filosofi Hindu-Bali, tradisi ini menyimbolkan konsep
+                    Rwabhineda — keseimbangan antara dua kekuatan yang
+                    berlawanan namun saling melengkapi. Pelaksanaannya setelah
+                    Nyepi menjadi simbol kebangkitan dan pembaruan setelah masa
+                    refleksi diri.
+                  </p>
+                  <a
+                    href="edukasi.html#makna-filosofi"
+                    class="faq__link"
+                    data-i18n="home.faq_a7_link"
+                    >Pelajari makna &amp; filosofi →</a
+                  >
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q8"
+                  >Sejak kapan ada festival Omed-Omedan?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a8">
+                    Sejak tahun 2008, pelaksanaan tradisi Omed-Omedan dilengkapi
+                    dengan festival budaya sebagai upaya memperkenalkan tradisi
+                    kepada masyarakat yang lebih luas.
+                  </p>
+                  <a
+                    href="sejarah.html"
+                    class="faq__link"
+                    data-i18n="home.faq_a8_link"
+                    >Lihat timeline sejarah →</a
+                  >
+                </div>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span data-i18n="home.faq_q9"
+                  >Apa yang perlu diperhatikan pengunjung?</span
+                >
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__wrap">
+                <div class="faq__a">
+                  <p data-i18n="home.faq_a9">
+                    Kenakan pakaian yang sopan dan hormati aspek sakral dari
+                    festival. Pengambilan foto diperbolehkan selama tidak
+                    mengganggu prosesi. Datanglah lebih awal untuk mendapatkan
+                    posisi terbaik, serta bawa air minum dan pelindung matahari.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ CTA SECTION ═══════════════════════════════════ -->
+      <section class="cta-section section" aria-label="Ajakan bertindak">
+        <div class="container">
+          <div class="cta-box corner-ornament" data-ornament>
+            <span class="section-header__label" data-i18n="home.cta_label"
+              >Bergabunglah Bersama Kami</span
+            >
+            <h2 data-i18n-html="home.cta_title">
+              Lestarikan Warisan Leluhur<br /><em
+                style="font-style: normal; color: var(--brand-accent)"
+                >Bersama Kami</em
+              >
+            </h2>
+            <div class="divider"></div>
+            <p data-i18n="home.cta_desc">
+              Website ini hadir untuk memastikan tradisi Omed-Omedan terus hidup
+              dan dikenal oleh generasi mendatang.
+            </p>
+            <div class="cta-box__actions">
+              <a
+                href="tentang.html"
+                class="btn btn--primary btn--lg"
+                data-i18n="home.cta_btn1"
+                >Tentang Kami</a
+              >
+              <a
+                href="narasumber.html"
+                class="btn btn--outline btn--lg"
+                data-i18n="home.cta_btn2"
+                >Tokoh Adat</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/i18n/translations.js?v=10"></script>
+    <script src="assets/js/i18n/i18n.js?v=4"></script>
+    <script src="assets/js/core/theme.js"></script>
+    <script src="assets/js/core/navbar.js?v=4"></script>
+    <script src="assets/js/core/footer.js?v=8"></script>
+    <script src="assets/js/pages/home.js?v=2"></script>
+    <script src="assets/js/pages/video.js"></script>
+  </body>
+</html>

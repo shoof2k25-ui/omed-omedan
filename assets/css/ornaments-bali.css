@@ -1,0 +1,219 @@
+/* ─────────────────────────────────────────────────────────
+   ORNAMENTS BALI — Ukiran/pepatraan corner & divider system
+   ───────────────────────────────────────────────────────── */
+
+/* ─── Corner base ─────────────────────────────────────────
+   .bali-corner spans are injected by ornaments.js into any
+   element that has data-ornament or .ornament-bali class.
+   ───────────────────────────────────────────────────────── */
+
+.bali-corner {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  pointer-events: none;
+  background-image: url('../images/ornaments/corner.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* Recolor ornamen ke brand-gold (#F5A31A) */
+  filter: invert(68%) sepia(82%) saturate(600%) hue-rotate(10deg) brightness(1.05);
+  opacity: 0.55;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Show more clearly on hover of parent */
+[data-ornament]:hover .bali-corner,
+.ornament-bali:hover .bali-corner {
+  opacity: 0.75;
+}
+
+/* ─── 4 corner positions + rotations ─── */
+.bali-corner--tl {
+  top:    var(--sp-4);
+  left:   var(--sp-4);
+  /* base SVG is already top-left orientation */
+}
+
+.bali-corner--tr {
+  top:    var(--sp-4);
+  right:  var(--sp-4);
+  transform: scaleX(-1);
+}
+
+.bali-corner--bl {
+  bottom: var(--sp-4);
+  left:   var(--sp-4);
+  transform: scaleY(-1);
+}
+
+.bali-corner--br {
+  bottom: var(--sp-4);
+  right:  var(--sp-4);
+  transform: scale(-1, -1);
+}
+
+/* ─── Section with ornaments needs position: relative ─── */
+[data-ornament],
+.ornament-bali {
+  position: relative;
+  overflow: hidden; /* clip corners that go outside */
+}
+
+/* ─── Hero corner — larger ─── */
+.hero[data-ornament] .bali-corner,
+.page-hero[data-ornament] .bali-corner {
+  width:   110px;
+  height:  110px;
+  opacity: 0.5;
+}
+
+/* ─── Card corner — smaller ─── */
+.card[data-ornament] .bali-corner,
+.narasumber-card[data-ornament] .bali-corner,
+.prosesi-card[data-ornament] .bali-corner {
+  width:   55px;
+  height:  55px;
+  opacity: 0.45;
+}
+
+/* ─── CTA box corner ─── */
+.cta-box[data-ornament] .bali-corner {
+  width:   80px;
+  height:  80px;
+  opacity: 0.5;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SECTION HEADER LOTUS DIVIDER
+   Replaces the simple .divider line with a lotus ornament
+   ───────────────────────────────────────────────────────── */
+
+.divider-lotus {
+  width:  320px;
+  height: 36px;
+  background-image: url('../images/ornaments/lotus-divider.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: var(--sp-4) auto var(--sp-6);
+  display: block;
+}
+
+/* ─── Simple divider upgrade (add lotus icon) ─── */
+.divider {
+  position: relative;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-mid));
+  margin: var(--sp-4) auto;
+  border-radius: var(--radius-full);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/ornaments/lotus-divider.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+  opacity: 0.55;
+}
+
+.divider::before { right: calc(100% + var(--sp-3)); }
+.divider::after  { left:  calc(100% + var(--sp-3)); }
+
+/* ─────────────────────────────────────────────────────────
+   HERO BORDER — top and bottom decorative line
+   ───────────────────────────────────────────────────────── */
+
+.hero-border {
+  display: block;
+  width: 100%;
+  height: 28px;
+  background-image: url('../images/ornaments/hero-border.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hero-border--bottom {
+  bottom: 0;
+}
+
+.hero-border--top {
+  top: var(--navbar-height);
+}
+
+/* ─────────────────────────────────────────────────────────
+   SECTION BORDER LINE — top border accent on sections
+   ───────────────────────────────────────────────────────── */
+
+.section-border-top {
+  position: relative;
+}
+
+.section-border-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(320px, 80%);
+  height: 28px;
+  background-image: url('../images/ornaments/lotus-divider.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* ─────────────────────────────────────────────────────────
+   CARD ORNAMENT — subtle top-center lotus on featured cards
+   ───────────────────────────────────────────────────────── */
+
+.card-ornament-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 16px;
+  background-image: url('../images/ornaments/hero-border.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SCROLL REVEAL — corners fade in when section is visible
+   ───────────────────────────────────────────────────────── */
+
+.bali-corner {
+  transition: opacity var(--transition-slow);
+}
+
+.bali-corner.is-visible {
+  opacity: 0.6;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 640px) {
+  .bali-corner { width: 55px; height: 55px; }
+  .divider-lotus { width: 240px; }
+
+  .bali-corner--tl { top: var(--sp-2); left: var(--sp-2); }
+  .bali-corner--tr { top: var(--sp-2); right: var(--sp-2); }
+  .bali-corner--bl { bottom: var(--sp-2); left: var(--sp-2); }
+  .bali-corner--br { bottom: var(--sp-2); right: var(--sp-2); }
+}

@@ -1,0 +1,55 @@
+﻿/* ─── Edukasi page ─── */
+
+.edukasi-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+
+.edukasi-content__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.edukasi-content__header h2 { margin-top: var(--sp-2); }
+
+.edukasi-content__body {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+.edukasi-content--reverse .edukasi-content__body {
+  grid-template-columns: 2fr 3fr;
+}
+
+.edukasi-content--reverse .edukasi-content__text { order: 2; }
+.edukasi-content--reverse .edukasi-content__visual { order: 1; }
+
+.edukasi-content__text h3 {
+  font-size: var(--fs-xl);
+  color: var(--color-heading);
+  margin-top: var(--sp-8);
+  margin-bottom: var(--sp-4);
+}
+
+.edukasi-content__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .edukasi-content__body,
+  .edukasi-content--reverse .edukasi-content__body {
+    grid-template-columns: 1fr;
+  }
+
+  .edukasi-content--reverse .edukasi-content__text,
+  .edukasi-content--reverse .edukasi-content__visual { order: 0; }
+}

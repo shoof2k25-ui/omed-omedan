@@ -1,0 +1,217 @@
+﻿/* ─── Video page ─── */
+
+.video-main {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--sp-10);
+  align-items: start;
+}
+
+/* ─── Video Player ─── */
+.video-player__wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
+}
+
+.video-player__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-card);
+}
+
+.video-player__play-btn {
+  width: 80px;
+  height: 80px;
+  background: var(--red);
+  border: none;
+  border-radius: var(--radius-full);
+  color: #ffffff; /* selalu putih — ikon di atas tombol merah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-base);
+  box-shadow: 0 4px 28px rgba(193, 127, 62, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.video-player__play-btn:hover {
+  background: var(--brand-accent);
+  transform: scale(1.1);
+}
+
+.video-player__play-btn svg {
+  width: 30px;
+  height: 30px;
+  margin-left: 4px;
+}
+
+.video-player__wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ─── Video Info ─── */
+.video-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.video-info h2 {
+  font-size: clamp(var(--fs-xl), 2.5vw, var(--fs-3xl));
+  color: var(--color-heading);
+  margin-top: var(--sp-3);
+}
+
+.video-info__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.video-info p {
+  color: var(--text-muted);
+}
+
+/* ─── Video Grid ─── */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+
+.video-thumb {
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.video-thumb:hover {
+  transform: translateY(-3px);
+  border-color: rgba(193, 127, 62, 0.45);
+}
+
+.video-thumb__wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-thumb__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75);
+  transition: filter var(--transition-base);
+}
+
+.video-thumb:hover .video-thumb__img {
+  filter: brightness(0.85);
+}
+
+.video-thumb__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-thumb__play {
+  width: 48px;
+  height: 48px;
+  background: rgba(204, 41, 41, 0.85);
+  border: none;
+  border-radius: var(--radius-full);
+  color: #ffffff; /* selalu putih — ikon di atas tombol */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.video-thumb:hover .video-thumb__play {
+  transform: scale(1.1);
+  background: var(--brand-accent);
+}
+
+.video-thumb__play svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  margin-left: 3px;
+}
+
+.video-thumb__duration {
+  position: absolute;
+  bottom: var(--sp-2);
+  right: var(--sp-2);
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff; /* selalu putih — badge di atas video gelap */
+  font-size: var(--fs-xs);
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+}
+
+.video-thumb__info {
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.video-thumb__title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-heading);
+  margin-bottom: var(--sp-1);
+  font-family: var(--font-serif);
+}
+
+.video-thumb__meta {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.video-thumb.active {
+  border-color: var(--red);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .video-main {
+    grid-template-columns: 1fr;
+  }
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}

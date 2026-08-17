@@ -1,0 +1,171 @@
+/* ══════════════════════════════════════════════════════════
+   VARIABLES — Semua warna turunan dari logo Omed-Omedan
+   Logo: Merah #CC2929 · Emas #F5A31A · Teks #111111
+   ══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Warna logo (fixed, tidak berubah di semua tema) ──── */
+  --red: #cc2929; /* logo merah utama */
+  --red-dk: #a82020; /* merah gelap — hover, gradient */
+  --red-lt: #e84040; /* merah terang — highlight */
+  --gold: #f5a31a; /* logo emas-oranye */
+  --gold-dk: #d4891a; /* emas gelap — hover */
+  --gold-lt: #ffb830; /* emas terang */
+
+  /* Alias lama → logo baru (hapus dependensi lama) */
+  --brand-red: var(--red);
+  --brand-red-dk: var(--red-dk);
+  --brand-gold: var(--gold);
+  --brand-gold-dk: var(--gold-dk);
+  --brand-accent: var(--gold); /* aksen utama = emas logo */
+  --brand-mid: var(--red-dk); /* gradient "mid" = merah gelap */
+  --brand-dark: #1a0e0e; /* struktur gelap, jarang dipakai */
+  --brand-light: #fff5ee; /* light tint dari emas */
+  --brand-cream: #fffbf7;
+  --white: #ffffff;
+
+  /* ── Font ─────────────────────────────────────────────── */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Lato", Arial, sans-serif;
+  --font-rounded: "Nunito", "Varela Round", Arial, sans-serif;
+
+  /* ── Ukuran font ───────────────────────────────────────── */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2rem;
+  --fs-4xl: 2.5rem;
+  --fs-5xl: 3rem;
+  --fs-6xl: 4rem;
+
+  /* ── Font weight ───────────────────────────────────────── */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* ── Line height ───────────────────────────────────────── */
+  --lh-tight: 1.2;
+  --lh-snug: 1.4;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  /* ── Spacing ───────────────────────────────────────────── */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-14: 3.5rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+
+  /* ── Layout ────────────────────────────────────────────── */
+  --max-width: 1200px;
+  --navbar-height: 70px;
+  --container-px: clamp(1.5rem, 3vw, 5rem);
+
+  /* ── Radius ────────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* ── Transisi ──────────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ── Z-index ───────────────────────────────────────────── */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+/* ══════════════════════════════════════════════════════════
+   DARK THEME — Latar gelap hangat, aksen logo menonjol
+   ══════════════════════════════════════════════════════════ */
+:root,
+html[data-theme="dark"] {
+  /* Aksen teks: emas kontras di atas bg gelap */
+  --accent-text: #f5a31a;
+  /* Background — gelap hangat, bukan abu-abu netral */
+  --bg-base: #0f0a0a; /* near-black dengan trace merah */
+  --bg-section: #141010; /* section: sedikit lebih terang */
+  --bg-elevated: #1a1414; /* elevated panels */
+  --bg-card: #201818; /* cards: warmth tipis */
+
+  /* Teks */
+  --text-primary: #ededed; /* putih bersih, tidak cream */
+  --text-muted: rgba(237, 237, 237, 0.55);
+  --text-light: rgba(237, 237, 237, 0.35);
+  --color-heading: #ffffff;
+
+  /* Border — tinted merah sangat tipis */
+  --border-subtle: rgba(204, 41, 41, 0.12);
+  --border-light: rgba(204, 41, 41, 0.28);
+
+  /* Shadow */
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 28px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.7);
+
+  /* Overlay (untuk hero/gambar) */
+  --overlay: rgba(10, 4, 4, 0.72);
+  --overlay-light: rgba(10, 4, 4, 0.42);
+
+  /* Placeholder gambar */
+  --placeholder-bg: linear-gradient(135deg, #201818, #1a1414, #201818);
+  --placeholder-stripe: rgba(204, 41, 41, 0.04);
+}
+
+/* ══════════════════════════════════════════════════════════
+   LIGHT THEME — Putih bersih, aksen logo tetap hidup
+   ══════════════════════════════════════════════════════════ */
+html[data-theme="light"] {
+  /* Aksen teks: merah gelap kontras di atas bg terang (5:1 ratio) */
+  --accent-text: #a82020;
+  /* Background — putih bersih */
+  --bg-base: #ffffff;
+  --bg-section: #ffffff;
+  --bg-elevated: #f5f5f5; /* section alt: trace emas sangat tipis */
+  --bg-card: #ffffff;
+
+  /* Teks */
+  --text-primary: #1a1a1a;
+  --text-muted: #5a5a5a;
+  --text-light: #909090;
+  --color-heading: #111111;
+
+  /* Border */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.16);
+
+  /* Shadow */
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.13);
+
+  /* Overlay */
+  --overlay: rgba(15, 8, 8, 0.7);
+  --overlay-light: rgba(15, 8, 8, 0.4);
+
+  /* Placeholder */
+  --placeholder-bg: linear-gradient(135deg, #fff0e8, #fff8f4, #fff0e8);
+  --placeholder-stripe: rgba(204, 41, 41, 0.04);
+}

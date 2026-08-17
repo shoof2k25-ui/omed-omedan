@@ -1,0 +1,153 @@
+﻿/* ─── Sejarah page ─── */
+
+.sejarah-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: center;
+  margin-bottom: var(--sp-6);
+}
+
+.sejarah-intro__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.sejarah-intro__text h2 { margin-bottom: var(--sp-3); }
+
+.sejarah-intro__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--border-subtle);
+}
+
+.sejarah-intro__img-caption {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  margin-top: var(--sp-3);
+  font-style: italic;
+  text-align: center;
+}
+
+/* ─── Timeline 2-col ─── */
+.sejarah-body {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--sp-16);
+  align-items: start;
+}
+
+.timeline {
+  position: relative;
+  padding-left: var(--sp-8);
+}
+
+/* Garis vertikal timeline — gradient merah ke transparan */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 8px; bottom: 0; left: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--red),
+    rgba(204, 41, 41, 0.06)
+  );
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--sp-10);
+}
+
+.timeline__item:last-child { padding-bottom: 0; }
+
+.timeline__dot {
+  position: absolute;
+  left: calc(-1 * var(--sp-8) - 6px);
+  top: 5px;
+  width: 14px; height: 14px;
+  border-radius: var(--radius-full);
+  background: var(--red);
+  border: 2px solid var(--bg-section);   /* matching section bg agar dot "mengambang" */
+  box-shadow: 0 0 0 3px rgba(204, 41, 41, 0.22);
+  transition: transform var(--transition-base);
+}
+
+.timeline__item:hover .timeline__dot { transform: scale(1.4); }
+
+.timeline__period {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: 0.15em;
+  color: var(--accent-text);    /* emas di dark, merah gelap di light */
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--sp-2);
+}
+
+.timeline__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-xl);
+  color: var(--color-heading);  /* hitam di light, putih di dark */
+  margin-bottom: var(--sp-3);
+}
+
+.timeline__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: var(--lh-relaxed);
+  max-width: 440px;
+}
+
+/* ─── Foto kolom kanan ─── */
+.sejarah-photos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--sp-8));
+}
+
+.sejarah-photos__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.sejarah-photo {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--border-subtle);
+}
+
+.sejarah-photo--tall   { aspect-ratio: 3 / 4; }
+.sejarah-photo--wide   { aspect-ratio: 16 / 9; grid-column: 1 / -1; }
+.sejarah-photo--square { aspect-ratio: 1; }
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .sejarah-intro { grid-template-columns: 1fr; }
+
+  .sejarah-body {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+
+  .sejarah-photos {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4);
+  }
+
+  .sejarah-photos__row { display: contents; }
+  .sejarah-photo--wide { grid-column: 1 / -1; }
+}

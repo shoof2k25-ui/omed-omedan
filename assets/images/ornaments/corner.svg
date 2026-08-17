@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130" fill="none">
+  <!-- Main horizontal arm -->
+  <path d="M10 10 C32 9 62 9 92 20" stroke="#C17F3E" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <!-- Horizontal scroll terminus -->
+  <path d="M92 20 C104 20 110 10 104 4 C98 -2 88 2 90 10 C91 14 96 16 102 14" stroke="#C17F3E" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Horizontal leaf-1 (pepatraan) -->
+  <path d="M36 10 C36 2 46 2 48 8 C50 14 44 18 38 14 Z" fill="#C17F3E" fill-opacity="0.18" stroke="#C17F3E" stroke-width="1.1" opacity="0.8"/>
+  <!-- Horizontal leaf-2 -->
+  <path d="M66 14 C64 6 74 4 76 12 C78 18 72 22 66 18 Z" fill="#C17F3E" fill-opacity="0.18" stroke="#C17F3E" stroke-width="1.1" opacity="0.8"/>
+
+  <!-- Horizontal small dot accents -->
+  <circle cx="24" cy="10" r="2"   fill="#C17F3E" opacity="0.7"/>
+  <circle cx="56" cy="12" r="1.6" fill="#C17F3E" opacity="0.55"/>
+
+  <!-- Main vertical arm -->
+  <path d="M10 10 C9 32 9 62 20 92" stroke="#C17F3E" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <!-- Vertical scroll terminus -->
+  <path d="M20 92 C20 104 10 110 4 104 C-2 98 2 88 10 90 C14 91 16 96 14 102" stroke="#C17F3E" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Vertical leaf-1 -->
+  <path d="M10 36 C2 36 2 46 8 48 C14 50 18 44 14 38 Z" fill="#C17F3E" fill-opacity="0.18" stroke="#C17F3E" stroke-width="1.1" opacity="0.8"/>
+  <!-- Vertical leaf-2 -->
+  <path d="M14 66 C6 64 4 74 12 76 C18 78 22 72 18 66 Z" fill="#C17F3E" fill-opacity="0.18" stroke="#C17F3E" stroke-width="1.1" opacity="0.8"/>
+
+  <!-- Vertical small dot accents -->
+  <circle cx="10" cy="24" r="2"   fill="#C17F3E" opacity="0.7"/>
+  <circle cx="12" cy="56" r="1.6" fill="#C17F3E" opacity="0.55"/>
+
+  <!-- Corner lotus diamond -->
+  <path d="M10 3 L15 8 L10 13 L5 8 Z" fill="#C17F3E" opacity="0.9"/>
+  <!-- Corner mini petals -->
+  <path d="M10 3 C8 0 5 1 6 4" stroke="#C17F3E" stroke-width="0.9" opacity="0.6"/>
+  <path d="M10 3 C12 0 15 1 14 4" stroke="#C17F3E" stroke-width="0.9" opacity="0.6"/>
+</svg>

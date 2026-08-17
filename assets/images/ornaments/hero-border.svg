@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 28" fill="none" preserveAspectRatio="none">
+  <!-- Outer line -->
+  <path d="M0 14 L480 14" stroke="#C17F3E" stroke-width="0.8" opacity="0.35"/>
+  <path d="M720 14 L1200 14" stroke="#C17F3E" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Left accent dots -->
+  <circle cx="492" cy="14" r="1.4" fill="#C17F3E" opacity="0.5"/>
+  <circle cx="502" cy="14" r="2"   fill="#C17F3E" opacity="0.65"/>
+  <circle cx="514" cy="14" r="2.8" fill="#C17F3E" opacity="0.8"/>
+  <circle cx="528" cy="14" r="1.8" fill="#C17F3E" opacity="0.6"/>
+  <circle cx="538" cy="14" r="1.2" fill="#C17F3E" opacity="0.4"/>
+
+  <!-- Center lotus motif -->
+  <path d="M600 3 L614 13 L600 23 L586 13 Z" fill="#C17F3E" fill-opacity="0.18" stroke="#C17F3E" stroke-width="1.4"/>
+  <path d="M600 7 L609 13 L600 19 L591 13 Z" fill="#C17F3E" fill-opacity="0.28"/>
+  <!-- Petals -->
+  <path d="M600 3 C596 -1 590 0 591 4" stroke="#C17F3E" stroke-width="1" opacity="0.7" stroke-linecap="round"/>
+  <path d="M600 3 C604 -1 610 0 609 4" stroke="#C17F3E" stroke-width="1" opacity="0.7" stroke-linecap="round"/>
+  <path d="M600 23 C596 27 590 26 591 22" stroke="#C17F3E" stroke-width="1" opacity="0.7" stroke-linecap="round"/>
+  <path d="M600 23 C604 27 610 26 609 22" stroke="#C17F3E" stroke-width="1" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- Right accent dots -->
+  <circle cx="662" cy="14" r="1.2" fill="#C17F3E" opacity="0.4"/>
+  <circle cx="672" cy="14" r="1.8" fill="#C17F3E" opacity="0.6"/>
+  <circle cx="686" cy="14" r="2.8" fill="#C17F3E" opacity="0.8"/>
+  <circle cx="698" cy="14" r="2"   fill="#C17F3E" opacity="0.65"/>
+  <circle cx="708" cy="14" r="1.4" fill="#C17F3E" opacity="0.5"/>
+</svg>

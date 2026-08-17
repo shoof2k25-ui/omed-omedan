@@ -1,0 +1,150 @@
+﻿/* ─── Jadwal page ─── */
+
+.jadwal-main {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.jadwal-event {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--sp-10);
+  align-items: start;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--sp-10);
+  border-top: 3px solid var(--red);     /* merah logo, bukan amber */
+}
+
+/* ─── Kotak tanggal ─── */
+.jadwal-event__date {
+  text-align: center;
+  padding: var(--sp-6) var(--sp-4);
+  background: linear-gradient(135deg, var(--red-dk), var(--red));
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.jadwal-event__day {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: #ffffff;   /* putih di atas background merah — kontras tinggi */
+}
+
+.jadwal-event__month {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.jadwal-event__year {
+  font-size: var(--fs-sm);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ─── Info event ─── */
+.jadwal-event__name {
+  font-size: clamp(var(--fs-2xl), 3vw, var(--fs-4xl));
+  color: var(--color-heading);
+  margin-bottom: var(--sp-2);
+}
+
+.jadwal-event__subtitle {
+  font-size: var(--fs-sm);
+  color: var(--accent-text);    /* emas di dark, merah gelap di light */
+  margin-bottom: var(--sp-6);
+  font-style: italic;
+}
+
+/* ─── Detail items ─── */
+.jadwal-event__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.jadwal-detail {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: flex-start;
+  padding: var(--sp-4);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.jadwal-detail__icon {
+  font-size: var(--fs-lg);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.jadwal-detail__label {
+  display: block;
+  font-family: var(--font-rounded);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-text);    /* kontras di kedua tema */
+  margin-bottom: 2px;
+}
+
+.jadwal-detail__value {
+  font-size: var(--fs-sm);
+  color: var(--text-primary);
+  line-height: var(--lh-snug);
+}
+
+/* ─── Rundown ─── */
+.rundown {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.rundown__item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--sp-8);
+  padding: var(--sp-6) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: start;
+}
+
+.rundown__item:last-child { border-bottom: none; }
+
+.rundown__time {
+  font-family: var(--font-rounded);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-extrabold);
+  color: var(--accent-text);    /* kontras di kedua tema */
+  padding-top: var(--sp-1);
+}
+
+.rundown__content h3 { font-size: var(--fs-xl); margin-bottom: var(--sp-2); }
+.rundown__content p  { font-size: var(--fs-sm); color: var(--text-muted); }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .jadwal-event { grid-template-columns: 1fr; }
+
+  .jadwal-event__date {
+    flex-direction: row;
+    gap: var(--sp-4);
+    padding: var(--sp-4) var(--sp-6);
+    justify-content: center;
+  }
+
+  .rundown__item {
+    grid-template-columns: 1fr;
+    gap: var(--sp-2);
+  }
+}
